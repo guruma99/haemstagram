@@ -7,7 +7,7 @@ function Header() {
         <div className="logo">
           <img
             className="logo-img"
-            src="/assets/welcome/Haemstagram (1).svg"
+            src="/assets/welcome/haemstagram.svg"
             alt="로고"
           />
         </div>

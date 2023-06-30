@@ -6,7 +6,7 @@ function Login() {
     <div className="login">
       <div className="wrapper">
         <div className="logo">
-          <img src="/assets/welcome/logo.svg" alt="로고" />
+          <img src="/assets/welcome/haemstagram.svg" alt="로고" />
         </div>
         <form className="login-contents">
           <div className="email-inp custom-inp">

@@ -1,0 +1,236 @@
+$class-101-white-200: #fafafa;
+$class-101-gray: #e8e8e8;
+$class-101-gray100: #9d9d9f;
+$class-101-gray200: #454545;
+$class-101-main: #373f50;
+$class-101-blue: #5085e8;
+$class-101-black: #262626;
+
+#root {
+  .feed-detail {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $class-101-gray200;
+      opacity: 0.9;
+    }
+
+    .wrapper {
+      width: 1200px;
+      height: 687px;
+      background-color: white;
+      border-radius: 15px;
+
+      position: relative;
+      z-index: 2;
+      display: flex;
+
+      .close {
+        width: 24px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
+      }
+
+      .main-image {
+        width: 877px;
+        height: 100%;
+        background-color: $class-101-gray;
+        flex-shrink: 0;
+        border-radius: 15px 0 0 15px;
+      }
+      .contents {
+        display: flex;
+        flex-direction: column;
+
+        .feed-content {
+          padding: 21px;
+          border-bottom: 1px solid $class-101-gray;
+          //flex의 영향을 받더라도 높이를 유지해야하기때문에 flex-shrink
+          flex-shrink: 0;
+
+          .top {
+            display: flex;
+            align-items: center;
+            .profile-image {
+              width: 43px;
+              height: 43px;
+              border-radius: 43px;
+              background-color: $class-101-gray;
+              margin-right: 16px;
+            }
+            .feed-desc {
+              .nickname {
+                font-size: 16px;
+                color: $class-101-gray200;
+              }
+
+              .timestamp {
+                font-size: 12px;
+                color: $class-101-gray200;
+                opacity: 0.4;
+                margin-top: 4px;
+              }
+            }
+          }
+
+          .body {
+            margin-top: 18px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: $class-101-gray200;
+          }
+
+          .bottom {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .like,
+            .comment {
+              display: flex;
+              align-items: center;
+
+              .asset {
+                width: 30px;
+                display: flex;
+                align-items: center;
+              }
+              & > .title {
+                font-size: 14px;
+                color: $class-101-gray100;
+              }
+            }
+          }
+        }
+
+        .feed-comments {
+          //댓글, 코멘트의 글 양에 따라 변하는 남은 영역 다 채우도록 하기위해
+          flex: 1;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          .comment-form {
+            padding: 11px 11px;
+            .top {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .left {
+                display: flex;
+                align-items: center;
+
+                .profile-image {
+                  width: 33px;
+                  height: 33px;
+                  border-radius: 33px;
+                  background-color: $class-101-gray;
+                  margin-right: 16px;
+                }
+
+                .feed-desc {
+                  .nickname {
+                    font-size: 12px;
+                    color: $class-101-gray200;
+                  }
+
+                  .timestamp {
+                    font-size: 10px;
+                    color: $class-101-gray200;
+                    opacity: 0.4;
+                    margin-top: 4px;
+                  }
+                }
+              }
+
+              .right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .like {
+                  display: flex;
+                  align-items: center;
+
+                  .asset {
+                    width: 16px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 4px;
+                  }
+
+                  & > .title {
+                    font-size: 10px;
+                    color: $class-101-gray;
+                  }
+                }
+
+                .reply-btn {
+                  margin-top: 6px;
+                  font-size: 10px;
+                  color: $class-101-blue;
+                }
+              }
+            }
+
+            .body {
+              font-size: 12px;
+              line-height: 1.67;
+              color: $class-101-gray200;
+              margin-top: 24px;
+            }
+          }
+
+          .reply {
+            padding-left: 38px;
+          }
+        }
+
+        .feed-write-comment {
+          height: 54px;
+          display: flex;
+          align-items: center;
+          padding: 0 21px;
+          border-bottom: 1px solid $class-101-gray;
+
+          .profile-image {
+            width: 33px;
+            height: 33px;
+            border-radius: 33px;
+            background-color: $class-101-gray;
+            margin-right: 14px;
+            flex-shrink: 0;
+          }
+          .write-comment {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            input {
+              border: none;
+              font-size: 12px;
+              color: $class-101-gray200;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

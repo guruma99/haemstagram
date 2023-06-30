@@ -1,0 +1,206 @@
+$class-101-white-200: #fafafa;
+$class-101-gray: #e8e8e8;
+$class-101-gray100: #9d9d9f;
+$class-101-gray200: #454545;
+$class-101-main: #373f50;
+$class-101-blue: #5085e8;
+$class-101-black: #262626;
+
+#root {
+  .profile {
+    padding-top: 53px;
+    background-color: $class-101-white-200;
+    min-height: 100vh;
+
+    .wrapper {
+      padding-top: 36px;
+      width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 100px;
+
+      .info {
+        display: flex;
+        align-items: center;
+        .profile-image {
+          width: 120px;
+          height: 120px;
+          border-radius: 120px;
+          background-color: $class-101-gray;
+          margin-right: 18px;
+          flex-shrink: 0; //이미지 부분 찌그러지지않게 넣는 속성
+        }
+        .profile-desc {
+          flex: 1;
+          .nickname {
+            font-size: 16px;
+            color: black;
+          }
+          //같이 중복활용하고있지만 내용은 다르다.
+          .quote {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 12px;
+            color: $class-101-gray200;
+
+            textarea {
+              border: none;
+              resize: none;
+              width: 100%;
+              height: 73px;
+              background-color: $class-101-white-200;
+            }
+          }
+          .follow-btn {
+            width: 100px;
+            height: 30px;
+            border-radius: 30px;
+            border: 1px solid $class-101-gray;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $class-101-black;
+            font-size: 12px;
+            margin-top: 12px;
+          }
+        }
+      }
+
+      .feed-images {
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        margin-top: 32px;
+
+        .feed-image {
+          margin-right: 25px;
+
+          img {
+            //높이의 비율만 적어놓으면 , 넓이는 원본 비율에 맞게 줄어드는걸 확인할 수 있다.
+            width: unset;
+            height: 175px;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .profile-contents {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 34px;
+
+        .feed-list {
+          width: 729px;
+          & > .title {
+            font-size: 20px;
+            color: $class-101-gray200;
+          }
+          .feeds {
+            .feed {
+              border: 1px solid $class-101-gray;
+              background-color: white;
+              margin-top: 25px;
+              padding: 20px 24px;
+
+              .top {
+                display: flex;
+                align-items: center;
+                .profile-image {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 40px;
+                  background-color: $class-101-gray;
+                  margin-right: 12px;
+                }
+                // 묘사
+                .profile-desc {
+                  .nickname {
+                    font-size: 14px;
+                    color: $class-101-gray200;
+                  }
+                  .timestamp {
+                    font-size: 10px;
+                    color: $class-101-gray200;
+                    opacity: 0.4;
+                    margin-top: 2px;
+                  }
+                }
+              }
+              .contents {
+                font-size: 12px;
+                color: $class-101-gray200;
+                margin-top: 48px;
+                line-height: 1.8;
+                //이미지가 들어갈것 미리 만들어주기 클래스
+                .image {
+                  width: 100%;
+                  height: 309px;
+                  background-color: $class-101-gray;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: cover;
+                  margin-top: 25px;
+                }
+              }
+
+              .bottom {
+                display: flex;
+                align-items: center;
+                margin-top: 25px;
+
+                .like,
+                .comment {
+                  display: flex;
+                  align-items: center;
+                  .asset {
+                    width: 32px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 12px;
+                  }
+                  .count {
+                    font-size: 16px;
+                    color: $class-101-gray;
+                  }
+                }
+
+                .like {
+                  margin-right: 24px;
+                }
+              }
+            }
+          }
+        }
+
+        .profile-info-desc {
+          width: 255px;
+          display: grid;
+          row-gap: 8px;
+          padding: 16px;
+          background-color: white;
+          border: 1px solid $class-101-gray;
+
+          position: sticky;
+          top: 80px;
+
+          .desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & > .title {
+              font-size: 12px;
+              text-align: left;
+            }
+            .count {
+              text-align: right;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
