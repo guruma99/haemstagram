@@ -1,0 +1,29 @@
+#root .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+#root .header .wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#root .header .wrapper .logo {
+  width: 124px;
+  display: flex;
+  align-items: center;
+}
+#root .header .wrapper .navigation .nav-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 30px);
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+#root .header .wrapper .navigation .nav-wrapper .nav {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */

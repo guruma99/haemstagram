@@ -1,0 +1,89 @@
+$class-101-gray: #e8e8e8;
+$class-101-gray100: #9d9d9f;
+$class-101-gray200: #454545;
+$class-101-main: #373f50;
+$class-101-blue: #5085e8;
+$class-101-black: #262626;
+
+#root {
+  .login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+      .logo {
+        display: flex;
+        align-items: center;
+        width: 272px;
+      }
+
+      .login-contents {
+        margin-top: 16px;
+        .custom-inp {
+          & > .title {
+            font-size: 12px;
+            color: $class-101-black;
+          }
+
+          .inp {
+            width: 272px;
+            border-radius: 5px;
+            border: 1px solid $class-101-gray;
+            height: 34px;
+            background-color: white;
+
+            input {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              padding: 0;
+              border: none;
+              padding: 0 8px;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .email-inp {
+        }
+
+        .password-inp {
+          margin-top: 20px;
+        }
+
+        .login-btn {
+          width: 100%;
+          height: 34px;
+          background-color: $class-101-black;
+          color: white;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          margin-top: 28px;
+          border: none;
+        }
+      }
+      .go-join {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        & > .title {
+          font-size: 12px;
+          color: $class-101-black;
+          margin-right: 8px;
+        }
+
+        & > .asset {
+          width: 32px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

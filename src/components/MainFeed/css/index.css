@@ -1,0 +1,170 @@
+#root .mainfeed {
+  padding-top: 54px;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+#root .mainfeed .wrapper {
+  padding-top: 30px;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#root .mainfeed .wrapper .feed-list {
+  width: 729px;
+}
+#root .mainfeed .wrapper .feed-list .write-feed {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid #e8e8e8;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #e8e8e8;
+  margin-right: 12px;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .inp {
+  flex: 1;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .inp input {
+  width: 100%;
+  font-size: 12px;
+  color: #454545;
+  border: none;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .inp input::-moz-placeholder {
+  color: #e8e8e8;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .inp input::placeholder {
+  color: #e8e8e8;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .get-image label {
+  width: 30px;
+  display: flex;
+  align-items: center;
+}
+#root .mainfeed .wrapper .feed-list .write-feed .get-image input {
+  display: none;
+}
+#root .mainfeed .wrapper .feed-list .feed {
+  border: 1px solid #e8e8e8;
+  background-color: white;
+  margin-top: 25px;
+  padding: 20px 24px;
+}
+#root .mainfeed .wrapper .feed-list .feed .top {
+  display: flex;
+  align-items: center;
+}
+#root .mainfeed .wrapper .feed-list .feed .top .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #e8e8e8;
+  margin-right: 12px;
+}
+#root .mainfeed .wrapper .feed-list .feed .top .profile-desc .nickname {
+  font-size: 14px;
+  color: #454545;
+}
+#root .mainfeed .wrapper .feed-list .feed .top .profile-desc .timestamp {
+  font-size: 10px;
+  color: #454545;
+  opacity: 0.4;
+  margin-top: 2px;
+}
+#root .mainfeed .wrapper .feed-list .feed .contents {
+  font-size: 12px;
+  color: #454545;
+  margin-top: 48px;
+  line-height: 1.8;
+}
+#root .mainfeed .wrapper .feed-list .feed .contents .image {
+  width: 100%;
+  height: 309px;
+  background-color: #e8e8e8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 25px;
+}
+#root .mainfeed .wrapper .feed-list .feed .bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+#root .mainfeed .wrapper .feed-list .feed .bottom .like,
+#root .mainfeed .wrapper .feed-list .feed .bottom .comment {
+  display: flex;
+  align-items: center;
+}
+#root .mainfeed .wrapper .feed-list .feed .bottom .like .asset,
+#root .mainfeed .wrapper .feed-list .feed .bottom .comment .asset {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+#root .mainfeed .wrapper .feed-list .feed .bottom .like .count,
+#root .mainfeed .wrapper .feed-list .feed .bottom .comment .count {
+  font-size: 16px;
+  color: #e8e8e8;
+}
+#root .mainfeed .wrapper .feed-list .feed .bottom .like {
+  margin-right: 24px;
+}
+#root .mainfeed .wrapper .friend-list {
+  position: sticky;
+  top: 84px;
+  padding: 20px 16px;
+  width: 246px;
+  border: 1px solid #e8e8e8;
+  background-color: white;
+}
+#root .mainfeed .wrapper .friend-list .my-profile {
+  display: flex;
+  align-items: center;
+}
+#root .mainfeed .wrapper .friend-list .my-profile .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #e8e8e8;
+  margin-right: 12px;
+}
+#root .mainfeed .wrapper .friend-list .my-profile .nickname {
+  font-size: 12px;
+  color: #454545;
+}
+#root .mainfeed .wrapper .friend-list .my-friends {
+  margin-top: 14px;
+}
+#root .mainfeed .wrapper .friend-list .my-friends > .title {
+  font-size: 10px;
+  color: #454545;
+}
+#root .mainfeed .wrapper .friend-list .my-friends .friend-list-wrapper {
+  margin-top: 14px;
+  display: grid;
+  row-gap: 8px;
+}
+#root .mainfeed .wrapper .friend-list .my-friends .friend-list-wrapper .friend {
+  display: flex;
+  align-items: center;
+}
+#root .mainfeed .wrapper .friend-list .my-friends .friend-list-wrapper .friend .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #e8e8e8;
+  margin-right: 12px;
+}
+#root .mainfeed .wrapper .friend-list .my-friends .friend-list-wrapper .friend .nickname {
+  font-size: 12px;
+  color: #454545;
+}/*# sourceMappingURL=index.css.map */
