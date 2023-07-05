@@ -1,25 +1,7 @@
 // src.firebase.js
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// import { Firestore, getFirestore } from "firebase/firestore";
-// import "firebase/database";
-import "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-// import {
-//   ref,
-//   getStorage,
-//   uploadBytes,
-//   listAll,
-//   getDownloadURL,
-// } from "firebase/storage";
-//   import {
-//     deleteDoc,
-//     doc,
-//     getDoc,
-//     getFirestore,
-//     setDoc,
-//     updateDoc,
-//   } from "firebase/firestore";
 
 //👇.env config 정보
 const firebaseConfig = {
@@ -35,15 +17,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig); // firebaseConfig를 사용하여 앱 초기화
-export const authService = getAuth(app);
-// export { signWidthEmailAndPassword };
-// export const dbService = getFirestore();
-// export const realtimeDbService = getDatabase();
-
-// const firebase = initializeApp(firebaseConfig);
-
-//firebase의 firestore 인스턴스를 변수에 저장
-// const Firestore = getFirestore(firebase);
+// firebase의 firestore 인스턴스를 변수에 저장
+// const firestore = Firesotre(app);
+const authService = getAuth(app);
+const db = getFirestore(app);
 
 //필요한 곳에서 사용할 수 있도록 내보내기
-// export { authService };
+export { db, authService };
