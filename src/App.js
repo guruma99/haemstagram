@@ -4,14 +4,14 @@ import "./App.css";
 import Login from "./components/Login/Login";
 import Join from "./components/Join/Join";
 import MainFeed from "./components/MainFeed/MainFeed";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import Detail from "./components/Detail/Detail";
 import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
