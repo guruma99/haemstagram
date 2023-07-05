@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import "./css/index.css";
 // import firebaseApp from "../../config/firebaseApp";
 import { authService } from "../../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-
-// const Fauth = firebaseApp.auth();
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 function Login() {
   const [email, setEmail] = useState(undefined);
   const [password, setpassword] = useState(undefined);
 
+  //로그인함수
   const __doLogin = async (e) => {
     try {
       e.preventDefault();
@@ -18,10 +17,12 @@ function Login() {
         email,
         password
       );
-      console.log(currentUser);
+      console.log(currentUser.user);
+      // console.log(currentUser.user.email);
+      // console.log(currentUser.user.uid);
       // setUser(currentUser.user);
     } catch (err) {
-      if (err.code == "auth/wrong-password") {
+      if (err.code === "auth/wrong-password") {
         console.log("비밀번호 틀림");
       }
       console.error(err);
@@ -29,6 +30,16 @@ function Login() {
       입력한 아이디가 없을 경우 : auth/user-not-found.
       비밀번호가 잘못된 경우 : auth/wrong-password.
       */
+    }
+  };
+
+  //로그아웃 함수
+  const __logout = async () => {
+    try {
+      await signOut(authService);
+      console.log("로그아웃 성공");
+    } catch (err) {
+      console.log(err.code);
     }
   };
 
@@ -65,7 +76,7 @@ function Login() {
             로그인 하기
           </button>
         </form>
-        <div className="go-join">
+        <div className="go-join" onClick={__logout}>
           <div className="title txt-bold">또는 회원가입하기</div>
           <div className="asset">
             <img src="/assets/welcome/arrow.svg" alt="회원가입하기" />

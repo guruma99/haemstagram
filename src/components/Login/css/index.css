@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  cursor: pointer;
 }
 #root .login .wrapper .go-join > .title {
   font-size: 12px;
