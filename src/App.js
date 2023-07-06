@@ -8,10 +8,13 @@ import MainFeed from "./components/MainFeed/MainFeed";
 import Detail from "./components/Detail/Detail";
 import Profile from "./components/Profile/Profile";
 import { db } from "./firebase";
+import { useDispatch, useSelector } from "react-redux";
 
 const database = db;
 
 function App() {
+  const dispatch = useDispatch();
+  const isHeaderOpen = useSelector((state) => state.layouts.isHeaderOpen);
   //닉네임을 실시간으로 불러오는 함수를 만들기
   const __getNicknames = useCallback(
     () => {
@@ -27,7 +30,8 @@ function App() {
   //함수를 실행시키기
   return (
     <div className="App">
-      {/* <Header /> */}
+      {/* path name을 추적해서 나오게하기 */}
+      {/* <true && Header /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
